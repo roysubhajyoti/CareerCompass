@@ -37,6 +37,12 @@ After cloning the repository, navigate to the project directory in your terminal
 npm install
 ```
 
+## Then run below command
+
+```bash
+   npm run dev
+```
+
 ### This command will install all the required dependencies specified in the package.json file.
 
 Contributing
