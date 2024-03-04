@@ -32,18 +32,19 @@ export const Header = () => {
           </Link>
         </li>
         <li>
-          <Link className="hover:text-amber-200">Contact</Link>
+          <Link className="hover:text-amber-200" to="/contact">
+            Contact
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/login"
+            className="text-white hover:border-b-red-300 hover:border-b-[.2px]"
+          >
+            Login/SignUp
+          </Link>
         </li>
       </ul>
-
-      <div className="text-xl">
-              <Link to="/login">
-                <button  className="text-white hover:border-b-red-300 hover:border-b-[.2px]">
-                Login/SignUp 
-                </button>
-              </Link>
-               
-      </div>
     </motion.div>
   );
 };
