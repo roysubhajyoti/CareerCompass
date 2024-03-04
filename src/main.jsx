@@ -8,6 +8,7 @@ import { GoogleGemini } from "./component/GoogleGemini";
 import { About } from "./component/About";
 import { Login } from "./component/Login";
 import { Contact } from "./component/Contact";
+import { SignUp } from "./component/Signup";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +35,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/Signup",
+        element: <SignUp />,
       },
     ],
   },

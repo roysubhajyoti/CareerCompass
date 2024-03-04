@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import videoBg from "../assets/videoBg.mp4";
 import { motion } from "framer-motion";
 
@@ -69,10 +70,10 @@ export const Login = () => {
         <div className="text-base text-center mt-5 text-white">
           <p className="font-semibold">
             Do not have an account?
-            <a href="#" className="font-semibold hover:underline">
+            <Link to="/signup" className="font-semibold hover:underline">
               {" "}
               SignUp
-            </a>
+            </Link>
           </p>
         </div>
       </motion.form>
