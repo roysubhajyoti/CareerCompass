@@ -13,12 +13,14 @@ export const Login = () => {
       ></video>
 
       <motion.form
-        className="absolute w-[30vw] h-[50vh] bg-transparent border-2 border-solid border-white border-opacity-20 backdrop-blur-sm shadow-lg rounded-md py-8 px-10"
+        className="absolute w-[30vw] h-[50vh] bg-transparent border-2 border-solid border-white border-opacity-20 backdrop-blur-sm shadow-lg rounded-md py-8 px-10 font-poppins"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <h1 className="text-4xl font-bold text-white text-center">LOGIN</h1>
+        <h1 className="text-4xl font-bold text-white text-center font-poppins">
+          Login
+        </h1>
 
         <div className="relative w-[100%] h-[10%] mb-8 mt-6 ">
           <input
@@ -50,7 +52,7 @@ export const Login = () => {
             Remember me?
           </label>
 
-          <a href="#" className="text-white hover:underline">
+          <a href="#" className="text-white hover:underline font-poppins">
             Forgot Password?
           </a>
         </div>
@@ -58,7 +60,8 @@ export const Login = () => {
         <div>
           <button
             type="submit"
-            className="w-[100%] mt-4 bg-white h-11 rounded-3xl shadow-md cursor-pointer text-black font-bold hover:bg-blue-500"
+            className="w-[100%] mt-4 bg-white h-11 rounded-3xl shadow-md cursor-pointer text-black font-bold hover:bg-blue-500 font-poppins
+            "
           >
             Login
           </button>
@@ -67,7 +70,8 @@ export const Login = () => {
           <p className="font-semibold">
             Do not have an account?
             <a href="#" className="font-semibold hover:underline">
-              Register
+              {" "}
+              SignUp
             </a>
           </p>
         </div>

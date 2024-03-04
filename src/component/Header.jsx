@@ -15,7 +15,7 @@ export const Header = () => {
         </Link>
       </div>
 
-      <ul className="text-white list-none flex gap-7 text-xl">
+      <ul className="text-white list-none flex gap-7 text-xl font-poppins">
         <li>
           <Link to="/" className="hover:text-amber-200">
             Home

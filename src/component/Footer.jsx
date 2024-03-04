@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Logo from "../assets/Logo.png";
 export const Footer = () => {
   return (
-    <div className="bg-[#020617] text-white  pr-10 pl-10 pt-10 min-h-screen flex flex-col justify-center items-center flex-wrap">
+    <div className="bg-[#020617] text-white  pr-10 pl-10 pt-10 min-h-screen flex flex-col justify-center items-center flex-wrap font-poppins">
       <div className="flex justify-evenly items-center mb-10 gap-96">
         <div className="w-1/3">
           <img src={Logo} alt="logo-CareerCompass" className="w-48" />

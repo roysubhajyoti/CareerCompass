@@ -23,7 +23,7 @@ export const GoogleGeminiEffect = ({
   return (
     <div className={cn("sticky top-40", className)}>
       <motion.p
-        className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300"
+        className="text-lg md:text-7xl font-poppins pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3, delay: 2 }}
@@ -31,7 +31,7 @@ export const GoogleGeminiEffect = ({
         {title || `Build Career with CareerCompass`}
       </motion.p>
       <motion.p
-        className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto"
+        className="text-xs md:text-xl font-poppins text-center text-neutral-400 mt-4 max-w-lg mx-auto"
         initial={{ x: "-350vh" }}
         animate={{ x: 0 }}
         transition={{ duration: 1, type: "spring", delay: 3, stiffness: 120 }}
