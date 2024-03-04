@@ -37,9 +37,12 @@ export const Header = () => {
       </ul>
 
       <div className="text-xl">
-        <button className="text-white hover:border-b-red-300 hover:border-b-[.2px]">
-          Login/SignUp
-        </button>
+              <Link to="/login">
+                <button  className="text-white hover:border-b-red-300 hover:border-b-[.2px]">
+                Login/SignUp 
+                </button>
+              </Link>
+               
       </div>
     </motion.div>
   );
