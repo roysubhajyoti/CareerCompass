@@ -2,6 +2,7 @@
 import React from "react";
 import SJR from "../assets/SJR.jpeg";
 import Rohit from "../assets/Rohit.jpeg";
+import sd from "../assets/sd.jpg";
 import { AnimatedTooltip } from "./UI/animated-tooltip";
 const people = [
   {
@@ -14,8 +15,7 @@ const people = [
     id: 2,
     name: "Soumojit",
     designation: "Founder",
-    image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    image: sd,
   },
   {
     id: 3,

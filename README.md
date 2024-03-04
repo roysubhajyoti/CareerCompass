@@ -37,16 +37,16 @@ After cloning the repository, navigate to the project directory in your terminal
 npm install
 ```
 
+### This command will install all the required dependencies specified in the package.json file.
+
+Contributing
+Now that you have forked and cloned the repository and installed the dependencies, you are ready to start contributing. Make your changes, commit them, and push to your forked repository. Finally, create a pull request to merge your changes into the original repository.
+
 ## Then run below command
 
 ```bash
    npm run dev
 ```
-
-### This command will install all the required dependencies specified in the package.json file.
-
-Contributing
-Now that you have forked and cloned the repository and installed the dependencies, you are ready to start contributing. Make your changes, commit them, and push to your forked repository. Finally, create a pull request to merge your changes into the original repository.
 
 If you encounter any issues or have questions, feel free to open an issue or reach out to the maintainers.
 
