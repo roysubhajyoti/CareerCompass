@@ -57,10 +57,7 @@ export const Login = () => {
             />
             Remember me?
           </label>
-
-          <a href="#" className="text-white hover:underline font-poppins">
-            Forgot Password?
-          </a>
+          <Link to="/forgot" className="text-white hover:underline font-poppins">{" "}Forgot Password?</Link>
         </div>
 
         <div>
