@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import videoBg from "../assets/videoBg.mp4";
 import { motion } from "framer-motion";
+import { FaUserLarge , FaLock } from "react-icons/fa6";
 
 export const Login = () => {
   return (
@@ -27,20 +28,24 @@ export const Login = () => {
           <input
             type="text"
             name="name"
-            placeholder="name"
+            placeholder="Username"
             className="w-[100%] h-[100%] bg-transparent border-2 border-solid border-slate-400
         border-opacity-25 rounded-3xl outline-none placeholder-white pt-5 pb-6 pl-5 pr-12"
           />
+          <div className="absolute top-4 left-88 right-4 text-white"><FaUserLarge /></div>
+          
         </div>
 
         <div className="relative w-[100%] h-[10%] my-5 ">
           <input
             type="password"
             name="password"
-            placeholder="password"
+            placeholder="Password"
             className="w-[100%] h-[100%] bg-transparent border-2 border-solid border-slate-400
         border-opacity-25 rounded-3xl outline-none placeholder-white pt-5 pb-6 pl-5 pr-12  "
           />
+          <div className="absolute top-4 left-88 right-4 text-white"><FaLock /></div>
+          
         </div>
 
         <div className="flex justify-between text-[15] mt-2 mb-2">
