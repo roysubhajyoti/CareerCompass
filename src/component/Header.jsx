@@ -7,7 +7,7 @@ export const Header = () => {
       className="bg-black h-14 flex flex-row justify-around items-center z-50 fixed top-5 inset-x-0 rounded-full hover:bg-slate-900 max-w-2xl mx-auto"
       initial={{ y: -120, opacity: 0 }}
       animate={{ y: 5, opacity: 1 }}
-      transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 120 }}
+      transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 130 }}
     >
       <div>
         <Link to="\">

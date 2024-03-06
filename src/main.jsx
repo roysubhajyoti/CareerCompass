@@ -8,7 +8,7 @@ import { GoogleGemini } from "./component/GoogleGemini";
 import { About } from "./component/About";
 import { Login } from "./component/Login";
 import { Contact } from "./component/Contact";
-import { SignUp } from "./component/SignUp";
+import { SignUp } from "./component/Signup";
 import { ForgotPass } from "./component/ForgotPass";
 const appRouter = createBrowserRouter([
   {
