@@ -10,6 +10,7 @@ import { Login } from "./component/Login";
 import { Contact } from "./component/Contact";
 import { SignUp } from "./component/Signup";
 import { ForgotPass } from "./component/ForgotPass";
+import { Path } from "./component/Path";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/forgot",
         element: <ForgotPass />,
+      },
+      {
+        path: "/paths",
+        element: <Path />,
       },
     ],
   },

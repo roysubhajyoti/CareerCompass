@@ -31,7 +31,7 @@ export const Plan = () => {
             desc={
               "Click On Explore/Singup if you did not SignUp please do SignUp first"
             }
-            linkc={"/plans"}
+            linkc={"/paths"}
             pic={parent}
           />
           <ThreeDCardDemo
@@ -39,7 +39,7 @@ export const Plan = () => {
             desc={
               "Click On Explore/Singup if you did not SignUp please do SignUp first"
             }
-            linkc={"/plans"}
+            linkc={"/paths"}
             pic={student}
           />
         </motion.div>
