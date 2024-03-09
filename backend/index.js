@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 const Education = require("./Education");
 mongoose.connect(
-  "mongodb+srv://royknight272:Radhekrishna51@cluster0.tj7olde.mongodb.net/Career_Compass_test"
+  "mongodb+srv://royknight272:xyz@cluster0.tj7olde.mongodb.net/Career_Compass_test"
 );
 
 app.get("/paths", (req, res) => {
