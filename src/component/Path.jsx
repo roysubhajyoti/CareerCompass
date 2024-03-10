@@ -33,9 +33,9 @@ export const Path = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 3, delay: 1.5 }}
         >
-          Explore the Plan on clicking the button You can see all the
+          Explore the Plan by clicking on the button You can see all the
           <br />
-          possible Carrear Ptahs
+          possible Career Paths and courses.
         </motion.h1>
         <div className="flex flex-col w-full ">
           <div className="flex justify-center relative gap-4 text-wrap top-40">
