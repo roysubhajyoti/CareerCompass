@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const ForgotPass = () => {
   return (
-    <div className="conatiners flex text-white dark:bg-black bg-white   dark:bg-grid-white/[0.2] bg-grid-black/[0.2] h-[100vh]">
+    <div className="conatiners flex  dark:bg-black bg-white   dark:bg-grid-white/[0.2] bg-grid-black/[0.2] h-[100vh]">
       <motion.div
         className="credentials absolute m-auto"
         initial={{ opacity: 0 }}
