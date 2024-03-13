@@ -1,13 +1,37 @@
 import img1 from "../assets/signupBackground.png";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import axios from 'axios';
+import {useNavigate } from "react-router-dom";
+
 export const SignUp = () => {
+
+  const [name,setName] = useState();
+  const [dob,setDob] = useState();  
+  const [email,setEmail] = useState();
+  const [password,setPassword] = useState();
+  const [phone,setPhone] = useState();
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:3001/Signup',{name,dob,email,password,phone})
+    .then(result => {
+      console.log(result)
+      navigate('/login')
+    }
+    )
+    .catch(err => console.log(err))
+  }
+
   return (
   <div className="container flex justify-center items-center min-h-[100vh] box-border">
 
     
       <img src={img1} className="h-[120vh] w-[100%] bg-center object-cover"></img>
     
-    <motion.form className="absolute w-[30%] px-10 py-10 mt-20 text-white bg-transparent border-2 border-dashed border-slate-400 rounded-md backdrop-blur-sm shadow-lg border-opacity-20"
+    <motion.form onSubmit={handleSubmit} className="absolute w-[30%] px-10 py-10 mt-20 text-white bg-transparent border-2 border-dashed border-slate-400 rounded-md backdrop-blur-sm shadow-lg border-opacity-20"
      initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3, delay: 0.6 }}>
@@ -15,39 +39,33 @@ export const SignUp = () => {
           
 
           <div className="relative w-[100%] h-[10%] mb-8 mt-6 ">
-              <input type="text" name="name" placeholder="e.g.Johny Sins" required
+              <input type="text" name="name" placeholder="e.g.Johny Sins" required onChange={(e) => setName(e.target.value)}
               className="w-[100%] h-[100%] pt-2 pb-4 pl-5 pr-12 outline-none rounded-3xl bg-transparent border-2 border-solid border-slate-400
               border-opacity-25"
               />
           </div>
           <div className="relative w-[100%] h-[10%] mb-8 mt-6 ">
-              <input type="number" name="day" placeholder="Day" required
-              className="w-[20%] h-[100%] pt-2 pb-4 pl-5 pr-2 mr-4 ml-2 outline-none rounded-xl bg-transparent border-2 border-solid border-slate-400
+              <label className="text-lg p-4">Date of Birth</label>
+              <input type="text" name="dob" placeholder="DD-MM-YYYY" required onChange={(e) => setDob(e.target.value)}
+              className="w-[100%] h-[100%] pt-2 pb-4 pl-5 pr-2 mr-4 mt-2 outline-none rounded-3xl bg-transparent border-2 border-solid border-slate-400
               border-opacity-25"
               />
-              <input type="number" name="month" placeholder="Month" required
-              className="w-[30%] h-[100%] pt-2 pb-4 pl-5 pr-2 mr-4 ml-2 outline-none rounded-xl  bg-transparent border-2 border-solid border-slate-400
-              border-opacity-25"
-              />
-              <input type="number" name="year" placeholder="Year" required
-              className="w-[25%] h-[100%] pt-2 pb-4 pl-5 pr-2 mr-4 ml-2 outline-none rounded-xl  bg-transparent border-2 border-solid border-slate-400
-              border-opacity-25"
-              />
+             
           </div>
           <div className=" relative w-[100%] h-[10%] mb-8 mt-6">
-              <input type="email" name="email" placeholder="xyz@gmail.com" required
+              <input type="email" name="email" placeholder="xyz@gmail.com" required onChange={(e) => setEmail(e.target.value)}
               className="w-[100%] h-[100%] pt-2 pb-4 pl-5 pr-12 outline-none rounded-3xl  bg-transparent border-2 border-solid border-slate-400
               border-opacity-25"
               />
           </div>
           <div className="relative w-[100%] h-[10%] mb-8 mt-6 ">
-                <input type="password" name="password" placeholder="Password" required
+                <input type="password" name="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)}
               className="w-[100%] h-[100%] pt-2 pb-4 pl-5 pr-12 outline-none rounded-3xl  bg-transparent border-2 border-solid border-slate-400
               border-opacity-25"
               />
           </div>
           <div className="relative w-[100%] h-[10%] mb-8 mt-6 ">
-                <input type="number" name="phone" placeholder="Phone No." required
+                <input type="number" name="phone" placeholder="Phone No." required onChange={(e) => setPhone(e.target.value)}
               className="w-[100%] h-[100%] pt-2 pb-4 pl-5 pr-12 outline-none rounded-3xl  bg-transparent border-2 border-solid border-slate-400
               border-opacity-25"
               />
