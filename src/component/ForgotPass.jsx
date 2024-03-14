@@ -17,7 +17,7 @@ export const ForgotPass = () => {
     e.preventDefault();
     console.log("Email in HS:"+email);
 
-    axios.post("http://localhost:3001/forgot",{email})
+    axios.post("http://localhost:3000/forgot",{email})
     .then( res => {
       if(res.data.Status === "Success"){
         alert("Successful");

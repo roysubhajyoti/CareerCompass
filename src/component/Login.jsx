@@ -27,7 +27,7 @@ export const Login = () => {
     console.log("Enterring HandleSubmit");
 
 
-    axios.post("http://localhost:3001/login",{email,password})
+    axios.post("http://localhost:3000/login",{email,password})
     .then(result => {
       console.log(result)
       console.log("  ___  "+rememberMe);

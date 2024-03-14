@@ -58,7 +58,7 @@ app.post('/forgot',async (req,res) =>{
         res.json({Status:"Success"})
         const secret = JWT_SECRET + user.password;
     const token = jwt.sign({email:user.email,id: user._id},secret,{expiresIn:"10m"});
-    const link = `http://localhost:5173/resetPassword/${user._id}/${token}`;
+    const link = `http://localhost:5174/resetPassword/${user._id}/${token}`;
     console.log(link);
 
     }}) 
@@ -85,6 +85,7 @@ app.get('/resetPassword/:id/:token',(req,res)=>{
     
 })
 
-app.listen(3001,()=>{
-    console.log("Server is Running");
-})
+const PORT = process.env.PORT || 3000;  // Use port 3001 by default
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

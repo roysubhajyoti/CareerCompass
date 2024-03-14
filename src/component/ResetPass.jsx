@@ -18,7 +18,7 @@ export const ResetPass = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
 
-    axios.post("http://localhost:3001/resetPassword",{password,confirmpassword,id,token})
+    axios.post("http://localhost:3000/resetPassword",{password,confirmpassword,id,token})
     .then( res => {
       if(res.data.Status === "Success"){
         console.log("Password Reset Successful");

@@ -16,7 +16,7 @@ export const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/Signup',{name,dob,email,password,phone})
+    axios.post('http://localhost:3000/Signup',{name,dob,email,password,phone})
     .then(result => {
       console.log(result)
       navigate('/login')

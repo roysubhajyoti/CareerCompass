@@ -11,7 +11,7 @@ import { Contact } from "./component/Contact";
 import { SignUp } from "./component/SignUp";
 import { ForgotPass } from "./component/ForgotPass";
 import { ResetPass } from "./component/ResetPass";
-
+import {Path} from "./component/Path";
 // const log = window.localStorage.getItem("isLogged");
 // const rem = window.localStorage.getItem("isRemem");
 
@@ -81,6 +81,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/resetPassword/:id/:token",
         element: <ResetPass />,
+      },
+      {
+        path: "/paths",
+        element: <Path />,
       },
     ],
   },
