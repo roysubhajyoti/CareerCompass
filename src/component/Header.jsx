@@ -1,7 +1,49 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Logo from "../assets/Logo.png";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export const Header = () => {
+
+  const [isLoggedInS, setIsLoggedInS] = useState(
+    sessionStorage.getItem("isLoggedInS") === "true"
+  );
+  const [isLoggedInL, setIsLoggedInL] = useState(
+    window.localStorage.getItem("isLoggedInL") === "true"
+  );
+  const navigate = useNavigate();
+
+  
+
+  useEffect(() => {
+   
+    const isLoggedInS = sessionStorage.getItem("isLoggedInS") === "true";
+    setIsLoggedInS(isLoggedInS);
+    
+    const isLoggedInL = window.localStorage.getItem("isLoggedInL") === "true";
+    setIsLoggedInL(isLoggedInL);
+
+  }, []);
+
+  
+  const handleLogout = () => {
+    
+
+    if(isLoggedInS){
+      
+      sessionStorage.removeItem("isLoggedInS");
+      setIsLoggedInS(false);
+      
+    }
+    else{
+      window.localStorage.removeItem("isLoggedInL");
+      setIsLoggedInL(false);
+      
+
+    }
+    
+    navigate('/login');
+  };
   return (
     <motion.div
       className="bg-black h-14 flex flex-row justify-around items-center z-50 fixed top-5 inset-x-0 rounded-full hover:bg-slate-900 max-w-2xl mx-auto"
@@ -37,12 +79,12 @@ export const Header = () => {
           </Link>
         </li>
         <li>
-          <Link
-            to="/login"
-            className="text-white hover:border-b-red-300 hover:border-b-[.2px]"
-          >
-            Login/SignUp
-          </Link>
+          {(isLoggedInL || isLoggedInS) ? (
+            <button onClick={handleLogout} className="text-white hover:border-b-red-300 hover:border-b-[.2px]">Logout</button>
+          ) : (
+            <Link to="/login">Login</Link>
+          )}  
+          
         </li>
       </ul>
     </motion.div>

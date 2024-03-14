@@ -2,15 +2,47 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { Error } from "./component/Error";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { Plan } from "./component/Plan";
 import { GoogleGemini } from "./component/GoogleGemini";
 import { About } from "./component/About";
 import { Login } from "./component/Login";
 import { Contact } from "./component/Contact";
-import { SignUp } from "./component/Signup";
+import { SignUp } from "./component/SignUp";
 import { ForgotPass } from "./component/ForgotPass";
-import { Path } from "./component/Path";
+import { ResetPass } from "./component/ResetPass";
+import {Path} from "./component/Path";
+// const log = window.localStorage.getItem("isLogged");
+// const rem = window.localStorage.getItem("isRemem");
+
+const ProtectedHome = () => {
+  const isLoggedIn = sessionStorage.getItem("isLoggedInS") === "true";
+  const isLoggedInLocal = window.localStorage.getItem("isLoggedInL") === "true";
+  
+
+  if (isLoggedIn) {
+    return <GoogleGemini />;
+  }
+  else if (isLoggedInLocal) {
+    return <GoogleGemini />;
+  } else {
+    return <Navigate to="/login" />;
+  }
+};
+
+const ProtectedPlan = () => {
+  const isLoggedIn = sessionStorage.getItem("isLoggedInS") === "true";
+  const isLoggedInLocal = window.localStorage.getItem("isLoggedInL") === "true";
+
+  if (isLoggedIn) {
+    return <Plan />;
+  }else if (isLoggedInLocal) {
+    return <Plan />;
+  } else {
+    return <Navigate to="/login" />;
+  }
+};
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -19,24 +51,24 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <GoogleGemini />,
+        element: <ProtectedHome />,
       },
       {
         path: "/plans",
-        element: <Plan />,
+        element:<ProtectedPlan />,
       },
       {
         path: "/about",
-        element: <About />,
+        element:<About />,
       },
 
       {
         path: "/contact",
-        element: <Contact />,
+        element:<Contact />,
       },
       {
         path: "/login",
-        element: <Login />,
+        element:<Login />,
       },
       {
         path: "/Signup",
@@ -45,6 +77,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/forgot",
         element: <ForgotPass />,
+      },
+      {
+        path: "/resetPassword/:id/:token",
+        element: <ResetPass />,
       },
       {
         path: "/paths",

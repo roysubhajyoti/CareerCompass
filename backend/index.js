@@ -2,11 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
+const Main = require("./Education");
 app.use(express.json());
 app.use(cors());
 const Education = require("./Education");
 mongoose.connect(
-  "mongodb+srv://royknight272:xyz@cluster0.tj7olde.mongodb.net/Career_Compass_test"
+  "mongodb://127.0.0.1:27017/careerCompass_test"
 );
 
 app.get("/paths", (req, res) => {
@@ -15,4 +16,10 @@ app.get("/paths", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-app.listen(3001);
+const PORT = process.env.PORT || 3001 ; // Use port 3001 by default
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+
+
