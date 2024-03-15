@@ -55,7 +55,18 @@ cd backend
 ```
 
 ```bash
-npx nodemon
+npm start
+```
+
+## After this run the following command to run server backend
+```bash
+cd backend/server
+```
+
+```bash
+npm start
 ```
 
 ## RUN Frontend normally in a diff terminal
+
+### Happy coding! 🚀
