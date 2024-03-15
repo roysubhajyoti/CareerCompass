@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { Popup } from "./Popup";
 export const Path = () => {
   const [userclass, setUserClass] = useState([]);
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [selectedStream, setSelectedStream] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     axios
@@ -97,22 +99,18 @@ export const Path = () => {
                           key={j}
                           className="hover:text-blue-500 text-md border p-2 m-2 hover:bg-gray-900 rounded-md shadow-lg leading-tight"
                           whileHover={{ scale: 1.2, originX: 0 }}
+                          onClick={() => setShowPopup(true)}
                         >
                           {name}
                         </motion.button>
                       ))}
+                      {showPopup && (
+                        <Popup
+                          onClose={() => setShowPopup(false)}
+                          selectedStream={selectedStream}
+                        />
+                      )}
                     </motion.div>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-          <div className="w-full relative top-52 ">
-            {selectedStream && (
-              <div>
-                <ul>
-                  {selectedStream.courses.map((course, i) => (
-                    <li key={i}>Course Duration :{course.duration}</li>
                   ))}
                 </ul>
               </div>
