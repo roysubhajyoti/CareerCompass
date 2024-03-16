@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { Popup } from "./Popup";
+import { Datasc } from "./Datasc";
 export const Path = () => {
   const [userclass, setUserClass] = useState([]);
   const [selectedLevel, setSelectedLevel] = useState(null);
   const [selectedStream, setSelectedStream] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [showDatasc, setShowDatasc] = useState(false);
 
   useEffect(() => {
     axios
@@ -68,6 +70,7 @@ export const Path = () => {
                               initial={{ x: "-150vh" }}
                               animate={{ x: -5 }}
                               whileHover={{ scale: 1.1 }}
+                              onDoubleClick={() => setShowDatasc(true)}
                             >
                               {stream.name}
                             </motion.button>
@@ -114,6 +117,14 @@ export const Path = () => {
                   ))}
                 </ul>
               </div>
+            )}
+          </div>
+          <div className="relative top-52">
+            {showDatasc && (
+              <Datasc
+                name={selectedStream ? selectedStream.name : null}
+                onClose={() => setShowDatasc(false)}
+              />
             )}
           </div>
         </div>
