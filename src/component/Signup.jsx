@@ -52,7 +52,7 @@ export const Signup = () => {
           <input
             type="text"
             name="name"
-            placeholder="e.g.Johny Sins"
+            placeholder="e.g.soumojit Debnath"
             required
             onChange={(e) => setName(e.target.value)}
             className="w-[100%] h-[100%] pt-2 pb-4 pl-5 pr-12 outline-none rounded-3xl bg-transparent border-2 border-solid border-slate-400
