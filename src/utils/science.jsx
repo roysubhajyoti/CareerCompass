@@ -46,7 +46,7 @@ export const science_data = [
           "Advance to roles such as school principal, college professor, or educational consultant",
         ],
       },
-      "research scientist": {
+      research: {
         path: [
           "Clear class 12 with Science stream (preferably with subjects related to research interest)",
           "Enroll in a Bachelor of Science (B.Sc) program (3 years)",
@@ -68,7 +68,7 @@ export const science_data = [
           "Advance to roles such as biotechnologist, research scientist, or product development manager",
         ],
       },
-      "forensic science": {
+      forensicscience: {
         path: [
           "Clear class 12 with Physics, Chemistry, and Biology (PCB) subjects",
           "Enroll in a Bachelor of Science (B.Sc) in Forensic Science program (3 years)",
@@ -129,7 +129,7 @@ export const science_data = [
           "Advance to roles such as physicist, research engineer, or professor",
         ],
       },
-      "marine biology": {
+      marinebiology: {
         path: [
           "Obtain a bachelor's degree in marine biology, biology, or zoology",
           "Gain fieldwork experience through internships or volunteer programs",
@@ -148,7 +148,7 @@ export const science_data = [
           "Advance to roles such as geologist, hydrogeologist, or geological engineer",
         ],
       },
-      "agricultural science": {
+      agriculture: {
         path: [
           "Clear class 12 with Physics, Chemistry, and Biology (PCB) subjects",
           "Enroll in a Bachelor of Science (B.Sc) in Agriculture program (4 years)",
@@ -158,7 +158,7 @@ export const science_data = [
           "Advance to roles such as agricultural scientist, farm manager, or agricultural consultant",
         ],
       },
-      "food technology": {
+      foodtechnology: {
         path: [
           "Clear class 12 with Physics, Chemistry, and Biology (PCB) subjects",
           "Enroll in a Bachelor of Technology (B.Tech) in Food Technology program (4 years)",
